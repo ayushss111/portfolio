@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal profile</title>
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+   <!-- <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    (function(){
+       emailjs.init({
+         publicKey: "3PW8RptXcrnAxmS69",
+       });
+    })();
+ </script> -->
+</head>
+
+
+
+<body>
+ <div id="header">
+        <div class="container">
+            <nav>
+                <p class="ay">AYUSH.</p>
+                 <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Portfolio">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                 </ul>
+                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text"> </div>
+            <h1>Hi,I'm  AYUSH SS </h1>
+            <p>Web  Develeper</p><br>
+         
+          
+        </div>
+ </div>
+<!-- ------------about------------ -->
+        <div id="about">
+            <div class="container1">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="/personal-portfolio-img/Capture (1).png"  >
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>My name is Ayush i am Become  a full-stack developer in the IT profession is a rewarding career path with plenty of opportunities for growth and innovation.
+                             It's great to hear that you're aiming for a fulfilling professional life along with personal well-being. 
+                             Remember to stay focused, keep learning, and embrace the challenges that come your way.
+                              If you ever need advice or assistance along your journey, feel free to reach out and i still working on to learn a new skills in every day in my life.</p>
+                         
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>HTML</span><br>designing webpage</li>
+                                <li><span>CSS</span><br>styling to the  webpage</li>
+                                <li><span>JAVASCRIPT</span><br>more advanced styling to the webpages</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2019-2021</span><br>+2 computer science pass out</li>
+                                <li><span>2021-2023</span><br>complete the bachelor of computer science degree in calicut university </li>
+                                <li><span>2024-current</span><br>study fullstack cource  in bridgeon institute </li>
+                            </ul>
+
+                        </div>
+                        <div class="tab-contents" id="experience" >
+                            <ul>
+                                <li><span>2024-current</span><br>training period in  bridgeon institute </li>
+                               
+                            </ul>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-----------------my work----------------->
+<div id="Portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Project</h1>
+        <div class="project-list" >
+            <div class="project">
+                <img src="/personal-portfolio-img/Screenshot (15).png" >
+            </div>
+            <div class="project">
+                <img src="/personal-portfolio-img/Screenshot (38).png" >
+            </div>
+            <div class="project">
+                <img src="/personal-portfolio-img/Screenshot (16).png" >
+            </div>
+
+
+        </div>
+        <a href="#contact" class="btn">See More</a>
+    </div>
+</div>
+<!---- -----contact---------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>contact@xample.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>0123456789</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://Github.com"><i class="fa-brands fa-github"></i></a>
+                
+                </div>
+
+            </div>
+          
+            <div class="contact-right">
+                <form action="https://api.web3forms.com/submit" method="post">
+                    <input type="hidden" name="access_key" value="09f8943d-5c9f-43b0-a7e9-58bbf547b3f0">
+                    <input type="text" id="text1" name="Name" placeholder="Your Name" required>
+                    <input type="email" id="email1" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" id="textarea" rows="6" placeholder="Your Message"></textarea>
+                    <input type="submit" value="submit" class="button" onclick="sendmail()" >
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    
+    
+
+    <script>
+
+         var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+           for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+           }
+           for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+           }
+           event.currentTarget.classList.add("active-link")
+           document.getElementById(tabname).classList.add("active-tab")
+
+        }
+    </script>
+    
+
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+
+
+    </script>
+   
+
+
+    <script src="email.js"></script>
+
+</body>
+</html>
